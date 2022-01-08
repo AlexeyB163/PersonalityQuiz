@@ -56,15 +56,47 @@
 		CE7D43402789B7C3003FF765 /* PersonalityQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				CE7D43412789B7C3003FF765 /* AppDelegate.swift */,
-				CE7D43432789B7C3003FF765 /* SceneDelegate.swift */,
-				CE7D43452789B7C3003FF765 /* ViewController.swift */,
-				CE7D43472789B7C3003FF765 /* Main.storyboard */,
-				CE7D434A2789B7C7003FF765 /* Assets.xcassets */,
-				CE7D434C2789B7C7003FF765 /* LaunchScreen.storyboard */,
-				CE7D434F2789B7C7003FF765 /* Info.plist */,
+				CE7D4358278A1B23003FF765 /* App */,
+				CE7D4355278A1A76003FF765 /* ViewControllers */,
+				CE7D4356278A1A9D003FF765 /* Storyboards */,
+				CE7D4357278A1AD4003FF765 /* Resources */,
 			);
 			path = PersonalityQuiz;
+			sourceTree = "<group>";
+		};
+		CE7D4355278A1A76003FF765 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D43452789B7C3003FF765 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE7D4356278A1A9D003FF765 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D43472789B7C3003FF765 /* Main.storyboard */,
+				CE7D434C2789B7C7003FF765 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CE7D4357278A1AD4003FF765 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D434A2789B7C7003FF765 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE7D4358278A1B23003FF765 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE7D43412789B7C3003FF765 /* AppDelegate.swift */,
+				CE7D43432789B7C3003FF765 /* SceneDelegate.swift */,
+				CE7D434F2789B7C7003FF765 /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalityQuiz/Info.plist;
+				INFOPLIST_FILE = PersonalityQuiz/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalityQuiz/Info.plist;
+				INFOPLIST_FILE = PersonalityQuiz/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
