@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Introduction View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,7 @@
         <!--Вопрос №-->
         <scene sceneID="ADd-O2-3zj">
             <objects>
-                <viewController id="7Ar-0D-H0E" sceneMemberID="viewController">
+                <viewController id="7Ar-0D-H0E" customClass="QuestionsViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16s-IP-1gW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,6 +260,26 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="multipleStackView" destination="0KG-fs-0iG" id="Pxa-JI-6B9"/>
+                        <outlet property="questionLabel" destination="IIS-Lu-vuU" id="Xng-WQ-Vwl"/>
+                        <outlet property="questionsProgressView" destination="OLF-TQ-nqj" id="Pts-5T-pwE"/>
+                        <outlet property="rangeSlider" destination="wzl-eu-OlX" id="IRf-mI-BBo"/>
+                        <outlet property="rangeStackView" destination="Gpz-nD-J0G" id="BWI-se-IsR"/>
+                        <outlet property="singleStackView" destination="V8m-8Z-Kki" id="vcN-a0-3yx"/>
+                        <outletCollection property="singleButtons" destination="Sdw-h0-dkk" collectionClass="NSMutableArray" id="1hs-e1-X4Y"/>
+                        <outletCollection property="singleButtons" destination="sE5-WY-Q76" collectionClass="NSMutableArray" id="fQR-fr-zAc"/>
+                        <outletCollection property="singleButtons" destination="WfG-cy-Vph" collectionClass="NSMutableArray" id="hjH-Js-paC"/>
+                        <outletCollection property="singleButtons" destination="1O2-oB-JKL" collectionClass="NSMutableArray" id="OCy-GH-BIh"/>
+                        <outletCollection property="multipleLabels" destination="Nrd-WJ-NVH" collectionClass="NSMutableArray" id="Ujy-UO-zVM"/>
+                        <outletCollection property="multipleLabels" destination="Tvs-LE-8RP" collectionClass="NSMutableArray" id="Wik-5G-0A3"/>
+                        <outletCollection property="multipleLabels" destination="8xZ-RW-oLq" collectionClass="NSMutableArray" id="Hti-bg-vjN"/>
+                        <outletCollection property="multipleLabels" destination="etm-q0-2St" collectionClass="NSMutableArray" id="kd7-Vt-Z9f"/>
+                        <outletCollection property="multipleSwitchs" destination="7Sc-ay-WAc" collectionClass="NSMutableArray" id="hDL-Ta-izy"/>
+                        <outletCollection property="multipleSwitchs" destination="spn-0B-kqi" collectionClass="NSMutableArray" id="1Gt-Ha-WuF"/>
+                        <outletCollection property="multipleSwitchs" destination="qSw-fa-3RS" collectionClass="NSMutableArray" id="pQ3-GO-xzM"/>
+                        <outletCollection property="multipleSwitchs" destination="xmx-lN-VT9" collectionClass="NSMutableArray" id="sA6-LG-TrD"/>
+                        <outletCollection property="rangeLabels" destination="JB3-eU-v29" collectionClass="NSMutableArray" id="tO4-vl-uDY"/>
+                        <outletCollection property="rangeLabels" destination="iNE-xK-0K5" collectionClass="NSMutableArray" id="Fzq-JB-S1D"/>
                         <segue destination="X9V-1n-RdJ" kind="show" identifier="showResult" id="9L1-2m-l4c"/>
                     </connections>
                 </viewController>
@@ -270,7 +290,7 @@
         <!--Результат-->
         <scene sceneID="yMB-NE-aBA">
             <objects>
-                <viewController id="X9V-1n-RdJ" sceneMemberID="viewController">
+                <viewController id="X9V-1n-RdJ" customClass="ResultViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gkY-f6-9Ia">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,10 +322,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="N8C-BR-eva">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="P2o-QL-Lsn"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="P2o-QL-Lsn">
+                            <connections>
+                                <segue destination="UNf-KJ-k3k" kind="unwind" unwindAction="unwindFor:" id="r0Q-18-2gp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iuh-cd-d8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="UNf-KJ-k3k" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2198" y="82"/>
         </scene>

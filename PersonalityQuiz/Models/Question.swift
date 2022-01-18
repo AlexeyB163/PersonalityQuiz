@@ -7,8 +7,44 @@
 
 struct Question {
     let title: String
-    let answer: [Answer]
     let type: ResponseType
+    let answer: [Answer]
+    
+    
+    static func getQuestions() -> [Question] {
+        [
+            Question(
+                title: "Какую пищу вы предпочитаете?",
+                type: .single,
+                answer: [
+                    Answer(title: "Стейк", animal: .dog),
+                    Answer(title: "Рыба", animal: .cat),
+                    Answer(title: "Морковь", animal: .rabbit),
+                    Answer(title: "Кукуруза", animal: .turtle ),
+                ]
+            ),
+            Question(
+                title: "Что вам нравится больше?",
+                type: .multiple,
+                answer: [
+                    Answer(title: "Плавать", animal: .dog),
+                    Answer(title: "Спать", animal: .cat),
+                    Answer(title: "Обниматься", animal: .rabbit),
+                    Answer(title: "Есть", animal: .turtle)
+                ]
+            ),
+            Question(
+                title: "Любите ли вы поездки на машине?",
+                type: .range,
+                answer: [
+                    Answer(title: "Ненавижу", animal: .cat ),
+                    Answer(title: "Нервничаю", animal: .rabbit),
+                    Answer(title: "Не замечаю", animal: .turtle),
+                    Answer(title: "Обожаю", animal: .dog )
+                ]
+            )
+        ]
+    }
 }
 
 struct Answer {
@@ -37,7 +73,7 @@ enum Animal: Character {
         case .rabbit:
             return "Вам нравится все мягкое. Вы здоровы и полны энергии."
         case .turtle:
-            return "Ваша сила в мудрости. Медленный и вдумчивый выигрывает на больших дистанциях."
+            return "Ваша сила в мудрости. Медленный и вдумчивый выигрывает на больших дистанциях. "
         }
     }
 }
