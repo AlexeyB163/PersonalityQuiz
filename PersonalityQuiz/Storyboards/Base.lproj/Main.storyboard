@@ -99,21 +99,33 @@
                                         <rect key="frame" x="121" y="0.0" width="46" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="7Ar-0D-H0E" eventType="touchUpInside" id="Tyb-AJ-Jmn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE5-WY-Q76">
                                         <rect key="frame" x="121" y="51" width="46" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="7Ar-0D-H0E" eventType="touchUpInside" id="RCj-HA-X0C"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfG-cy-Vph">
                                         <rect key="frame" x="121" y="102" width="46" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="7Ar-0D-H0E" eventType="touchUpInside" id="LTv-us-i7x"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O2-oB-JKL">
                                         <rect key="frame" x="121" y="153" width="46" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="7Ar-0D-H0E" eventType="touchUpInside" id="M3U-Rf-4nE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -180,6 +192,9 @@
                                         <rect key="frame" x="0.0" y="188" width="288" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="7Ar-0D-H0E" eventType="touchUpInside" id="xMT-s3-VNu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -209,7 +224,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUc-0D-z2F">
                                         <rect key="frame" x="0.0" y="94" width="288" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <action selector="rangeAnswerButtonPressed" destination="7Ar-0D-H0E" eventType="touchUpInside" id="wzb-za-lNg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -252,13 +270,7 @@
                             </constraint>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="jhZ-s7-cSX">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="4Lf-kL-As2">
-                            <connections>
-                                <segue destination="X9V-1n-RdJ" kind="show" id="aog-Tf-Ibj"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="jhZ-s7-cSX"/>
                     <connections>
                         <outlet property="multipleStackView" destination="0KG-fs-0iG" id="Pxa-JI-6B9"/>
                         <outlet property="questionLabel" destination="IIS-Lu-vuU" id="Xng-WQ-Vwl"/>
@@ -328,6 +340,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="discriptionLabel" destination="kfl-cY-30p" id="zzl-LB-QL5"/>
+                        <outlet property="userIconLabel" destination="INb-bs-a7Z" id="QTd-sI-WQj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iuh-cd-d8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="UNf-KJ-k3k" userLabel="Exit" sceneMemberID="exit"/>
@@ -353,9 +369,6 @@
             <point key="canvasLocation" x="712.5" y="82.394366197183103"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="9L1-2m-l4c"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
